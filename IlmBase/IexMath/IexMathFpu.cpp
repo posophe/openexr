@@ -257,7 +257,7 @@ const uint16_t cwRestoreVal = (0 << 10) | (3 << 8);
 
 #ifdef ILMBASE_HAVE_CONTROL_REGISTER_SUPPORT
 
-inline void
+inline static void
 restoreControlRegs (const ucontext_t & ucon, bool clearExceptions)
 {
     setCw ((ucon.uc_mcontext.fpregs->cwd & cwRestoreMask) | cwRestoreVal);
